@@ -108,3 +108,19 @@ def main():
 
     footer()
 
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as err:
+        print("Runtime error:", err)
+
+summary = {
+    "keyword": aggregator,
+    "market": optimal_prices,
+    "control": slippage,
+}
+
+for k, v in summary.items():
+    print(k, v)
+```
